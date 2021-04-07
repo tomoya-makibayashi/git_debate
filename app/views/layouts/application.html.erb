@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RonPa</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header_title">
+      RonPa<span>~テーマに沿って意見を戦わせよう~</span>
+      </div>
+      <div class="header_menu">
+          <a href="", class="header_menu_btn">戦況</a>
+          <a href="", class="header_menu_btn">参戦</a>
+          <a href="", class="header_menu_btn">撤退</a>
+          <a href="", class="header_menu_btn">仲間</a>
+          <a href="", class="header_menu_btn">戦績</a>
+        </ul>
+      </div>
+    </header>
+    <main class="main">
+    <%= yield %>
+    </main>
+    <footer class="footer">
+      <div class="footer_text">©️Makibayashi.Tomoya 2021</div>
+    </footer>
+  </body>
+</html>

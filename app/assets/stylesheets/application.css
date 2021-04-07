@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+h1, h2, h3, h4, h5{
+    text-decoration: none;
+    margin-top: 0px;
+}
+
+.header {
+    width: 100%;
+    background-color: #990033;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+.header_title {
+    font-size: 86px;
+}
+
+.header_title span{
+    font-size: 48px;
+}
+
+.header_menu{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header_menu_btn{
+    font-size: 33px;
+    margin-left: 33px;
+    text-decoration: none;
+    padding: 8px;
+    color: #fff;
+}
+
+.header_menu_btn:hover{
+    background-color: #993366;
+}
+
+.main{
+    width: 100%;
+    position: relative;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    background-color: #DB7093;
+}
+
+.footer{
+    background-color: #000;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+}
+
+.footer_text{
+    width: 100%;
+    text-align: center;
+    color: #fff; 
+}
+
+.contents_row {
+    width: 80%;
+    margin: 0px auto;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contents_debate {
+    background-color: #A16EFF;
+    box-sizing: border-box;
+    width: 32%;
+    color: #000;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid #FFFACD;
+}
+
+.contents_theme {
+    background-color: #FF82B2;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.contents_min {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.contents_menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contents_population {
+    color: #000;
+}
+
+.contents_btn {
+    color: #000;
+    font-size: 20px;
+}
+
+.participation_btn {
+    color: #000;
+    font-size: 20px;
+}
