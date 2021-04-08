@@ -1,5 +1,25 @@
+<div class="contents_new">
 <%= form_for(@themes) do |f| %>
-    <%= f.text_field :title, placeholder: "お題を入力（Yes/Noで答えられるもの）" %>
-    <%= f.text_area :text, placeholder: "投稿した理由・背景を記入" %>
-    <%= f.submit "討論開始" %>
+    <div class="new_form">
+        <div class="new_form_field">
+            <div class="label">
+                <%= f.label :タイトル, class: "new_form_label" %>
+            </div>
+            <div class="new_form_area">
+                <%= f.text_field :title, placeholder: "お題を入力（Yes/Noで答えられるもの）", class: "new_form_title" %>
+            </div>
+        </div>
+        <div class="new_form_field">
+            <div class="label">
+                <%= f.label :投稿の背景, class: "new_form_label" %>
+            </div>
+            <div class="new_form_area">
+                <%= f.text_area :text, placeholder: "投稿した理由・背景を記入", class: "new_form_textarea" %>
+            </div>
+        </div>
+    </div>
+    <div class="action">
+        <%= f.submit "討論開始", class: "new_form_btn" %>
+    </div>
 <% end %>
+</div>

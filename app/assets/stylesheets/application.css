@@ -135,3 +135,67 @@ h1, h2, h3, h4, h5{
     color: #000;
     font-size: 20px;
 }
+
+
+.contents_new {
+    background-color: #7fff00;
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px;
+}
+
+.new_form {
+    background-color: #00bfff;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+    height: 400px;
+}
+
+.new_form_field {
+    background-color: #ff7f50;
+    width: 100%;
+}
+
+.label {
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.new_form_label {
+}
+
+.new_form_area {
+    background-color: #2f4f4f;
+    display: flex;
+    justify-content: center;
+}
+
+.new_form_title {
+    font-size: 25px;
+    width: 80%;
+}
+
+.new_form_textarea {
+    font-size: 25px;
+    height: 200px;
+    width: 80%;
+}
+
+.action {
+    background-color: #ffd700;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.new_form_btn {
+    background-color: #990033;
+    color: #fff;
+    border-color: #990033;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 5px;
+}

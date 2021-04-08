@@ -1,6 +1,6 @@
 class ThemesController < ApplicationController
     def new
-        @themes = Themes.new
+        @themes = Theme.new
     end
     
     def create
