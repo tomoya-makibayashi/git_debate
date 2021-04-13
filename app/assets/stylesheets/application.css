@@ -96,19 +96,22 @@ h1, h2, h3, h4, h5{
 }
 
 .contents_debate {
-    background-color: #A16EFF;
+    background-color: #FFDBC9;
     box-sizing: border-box;
     width: 32%;
     color: #000;
     margin: 5px;
     padding: 5px;
-    border: 2px solid #FFFACD;
+    border: 2px solid #660000;
+    border-radius: 10px;
 }
 
 .contents_theme {
-    background-color: #FF82B2;
+    background-color: #FFFFEE;
     font-size: 25px;
     font-weight: bold;
+    border: 2px solid #660000;
+    border-radius: 10px;
 }
 
 .contents_min {
@@ -138,22 +141,22 @@ h1, h2, h3, h4, h5{
 
 
 .contents_new {
-    background-color: #7fff00;
     width: 80%;
     margin: 0 auto;
     padding: 80px;
 }
 
 .new_form {
-    background-color: #00bfff;
+    background-color: #FFDBC9;
     width: 90%;
     margin: 0 auto;
     padding: 5px;
-    height: 400px;
+    height: 450px;
+    border: 2px solid #660000;
+    border-radius: 6px;
 }
 
 .new_form_field {
-    background-color: #ff7f50;
     width: 100%;
 }
 
@@ -161,13 +164,14 @@ h1, h2, h3, h4, h5{
     font-size: 38px;
     font-weight: bold;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .new_form_label {
+    margin-left: 30px;
 }
 
 .new_form_area {
-    background-color: #2f4f4f;
     display: flex;
     justify-content: center;
 }
@@ -175,16 +179,23 @@ h1, h2, h3, h4, h5{
 .new_form_title {
     font-size: 25px;
     width: 80%;
+    margin-bottom: 15px;
+    border: 2px solid #660000;
+    border-radius: 6px;
+    background-color: #FFFFEE;
 }
 
 .new_form_textarea {
     font-size: 25px;
     height: 200px;
     width: 80%;
+    margin-bottom: 15px;
+    border: 2px solid #660000;
+    border-radius: 6px;
+    background-color: #FFFFEE;
 }
 
 .action {
-    background-color: #ffd700;
     width: 90%;
     margin: 10px auto;
     display: flex;
@@ -198,4 +209,80 @@ h1, h2, h3, h4, h5{
     font-size: 40px;
     font-weight: bold;
     padding: 5px;
+    border-radius: 10px;
+}
+
+.contents_opinion {
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px;
+    background-color: #FF11FF;
+}
+
+.opinion_form {
+    background-color: #FFDBC9;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+    height: 450px;
+    border: 2px solid #660000;
+    border-radius: 6px;
+}
+
+.opinion_form_field {
+    width: 100%;
+    background-color: #88FFFF;
+}
+
+.opinion_form_area1 {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #FF5192;
+    height:40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.opinion_form_area {
+    display: flex;
+    justify-content: center;
+    background-color: #FF5192;
+}
+
+.opinion_form_foragainst {
+    font-size: 30px;
+    border: 2px solid #660000;
+    border-radius: 6px;
+    background-color: #FFFFEE;
+}
+
+.opinion_form_label {
+    margin-left: 30px;
+}
+
+.opinion_form_textarea {
+    font-size: 25px;
+    height: 200px;
+    width: 80%;
+    margin-bottom: 15px;
+    border: 2px solid #660000;
+    border-radius: 6px;
+    background-color: #FFFFEE;
+}
+
+.action_opinion {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.opinion_form_btn {
+    background-color: #990033;
+    color: #fff;
+    border-color: #990033;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
 }
