@@ -127,16 +127,19 @@ h1, h2, h3, h4, h5{
 
 .contents_population {
     color: #000;
+    display: flex;
 }
 
 .contents_btn {
     color: #000;
     font-size: 20px;
+    margin-right: 10px;
 }
 
 .participation_btn {
     color: #000;
     font-size: 20px;
+    margin-left: 10px;
 }
 
 
@@ -216,44 +219,44 @@ h1, h2, h3, h4, h5{
     width: 80%;
     margin: 0 auto;
     padding: 80px;
-    background-color: #FF11FF;
 }
 
 .opinion_form {
-    background-color: #FFDBC9;
     width: 90%;
     margin: 0 auto;
-    padding: 5px;
-    height: 450px;
+    padding: 15px;
     border: 2px solid #660000;
     border-radius: 6px;
+    background-color: #FFDBC9;
 }
 
 .opinion_form_field {
     width: 100%;
-    background-color: #88FFFF;
 }
 
 .opinion_form_area1 {
     display: flex;
     justify-content: flex-start;
-    background-color: #FF5192;
     height:40px;
-    font-size: 30px;
-    font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .opinion_form_area {
     display: flex;
     justify-content: center;
-    background-color: #FF5192;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .opinion_form_foragainst {
-    font-size: 30px;
-    border: 2px solid #660000;
+    border: 1px solid #660000;
     border-radius: 6px;
     background-color: #FFFFEE;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid #660000;
+    border-radius: 6px;
 }
 
 .opinion_form_label {
@@ -263,8 +266,15 @@ h1, h2, h3, h4, h5{
 .opinion_form_textarea {
     font-size: 25px;
     height: 200px;
-    width: 80%;
-    margin-bottom: 15px;
+    width: 100%;
+    border: 2px solid #660000;
+    border-radius: 6px;
+    background-color: #FFFFEE;
+}
+
+.opinion_form_url {
+    font-size: 25px;
+    width: 100%;
     border: 2px solid #660000;
     border-radius: 6px;
     background-color: #FFFFEE;

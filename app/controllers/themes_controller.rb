@@ -10,6 +10,6 @@ class ThemesController < ApplicationController
     
     private
     def create_params
-        params.require(:theme).permit(:title, :text)
+        params.require(:theme).permit(:title, :text, :status)
     end
 end
