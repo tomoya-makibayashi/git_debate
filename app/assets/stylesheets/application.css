@@ -110,8 +110,9 @@ h1, h2, h3, h4, h5{
     background-color: #FFFFEE;
     font-size: 25px;
     font-weight: bold;
+    height: 50px;
     border: 2px solid #660000;
-    border-radius: 10px;
+    overflow: scroll;
 }
 
 .contents_min {
@@ -255,8 +256,6 @@ h1, h2, h3, h4, h5{
     background-color: #FFFFEE;
     font-size: 30px;
     font-weight: bold;
-    border: 2px solid #660000;
-    border-radius: 6px;
 }
 
 .opinion_form_label {

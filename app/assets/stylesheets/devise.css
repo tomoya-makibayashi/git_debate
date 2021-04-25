@@ -1,0 +1,86 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main{
+    width: 100%;
+    position: relative;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+.footer{
+    background-color: #000;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+}
+
+.footer_text{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.contents_login {
+    background-image: url('login_background.jpeg');
+    width: 100%;
+    padding-top: 385px;
+    padding-bottom: 385px;
+}
+
+.contents_field {
+    background-color: #DB7093;
+    width: 500px;
+    margin: 0 auto;
+}
+.label {
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.email_field {
+    font-size: 25px;
+}
+
+.password_field {
+    font-size: 25px;
+}
+
+.remember_me {
+    font-size: 20px;
+}
+
+.actions {
+    width: 165px;
+    margin: 0 auto;
+}
+
+.btn_field {
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.label_field {
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.label_field_sub {
+    text-align: center;
+}
+
+.contents_box {
+    width: 270px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.label_field_remember span {
+    font-size: 15px;
+}

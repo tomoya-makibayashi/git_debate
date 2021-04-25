@@ -10,6 +10,6 @@ class ThemesController < ApplicationController
     
     private
     def create_params
-        params.require(:theme).permit(:title, :text, :status)
+        params.require(:theme).permit(:title, :text, :status).merge(user_id: current_user.id)
     end
 end

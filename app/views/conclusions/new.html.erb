@@ -1,0 +1,35 @@
+<div class="contents_opinion">
+<%= form_for [@theme,@conclusion] do |f| %>
+    <div class="opinion_form">
+        <div class="opinion_form_field">
+            <div class="label">
+                <%= f.label :勝利チーム, class: "opinion_form_label" %>
+            </div>
+            <div class="opinion_form_area1">
+                <%= f.select :foragainst, [["賛成", "賛成"], ["反対", "反対"]], include_blank: "選択してください", class: "opinion_form_foragainst" %>
+            </div>
+        </div>
+        <div class="opinion_form_field">
+            <div class="label">
+                <%= f.label :結論の根拠, class: "opinion_form_label" %>
+            </div>
+            <div class="opinion_form_area">
+                <%= f.text_area :text, placeholder: "結論の根拠を記入", class: "opinion_form_textarea" %>
+            </div>
+        </div>
+        <div class="opinion_form_field">
+            <div class="label">
+                <%= f.label :ＭＯＤ（最も決定的な意見）, class: "opinion_form_label" %>
+            </div>
+            <div class="opinion_form_area1">
+                <%= f.select :winner_id, @users.map{|user| [user.nickname, user.id]}, include_blank: "選択してください", class: "opinion_form_foragainst" %>
+            </div>
+        </div>
+        <%= f.hidden_field :status, :value => '受付終了' %>
+    </div>
+    <div class="action_opinion">
+        <%= f.submit "結論する", class: "opinion_form_btn" %>
+    </div>
+<% end %>
+    <%= render partial: "conclusions/opinion", collection: @themes %>
+</div>

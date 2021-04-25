@@ -4,12 +4,16 @@
     <div class="contents_min">ご意見を受付中です</div>
     <div class="contents_menu">
         <div class="contents_population">
-            <p class="contents_btn">賛成◯人</a>
-            <p class="contents_btn">反対◯人</a>
+            <p class="contents_btn">賛成<%= theme.opinions.where(foragainst: '賛成').count %>件</p>
+            <p class="contents_btn">反対<%= theme.opinions.where(foragainst: '反対').count %>件</p>
         </div>
         <div class="contents_population">
+        <%= link_to '参加', new_theme_opinion_path(theme), class: "participation_btn" %>
+
         <a href="", class="participation_btn">詳細</a>
-        <a href="", class="participation_btn">結論</a>
+        <% if current_user.id != theme.user_id %>
+        <a href="", class="participation_btn">結果</a>
+        <% end %>
         </div>
     </div>
 </div>

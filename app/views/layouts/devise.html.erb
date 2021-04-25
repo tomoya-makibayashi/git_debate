@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RonPa</title>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <%= stylesheet_link_tag 'devise.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    </head>
+    
+    <body class="body">
+        <main class="login_main">
+        <%= yield %>
+        </main>
+        <footer class="footer">
+          <div class="footer_text">©️Makibayashi.Tomoya 2021</div>
+        </footer>
+    </body>
+</html>
