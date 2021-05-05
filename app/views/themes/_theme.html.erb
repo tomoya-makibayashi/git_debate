@@ -1,18 +1,34 @@
 <div class="contents_debate">
     <div class="contents_date">投稿日:<%= theme.created_at %></div>
     <div class="contents_theme"><%= theme.title %></div>
-    <div class="contents_min">ご意見を受付中です</div>
+    <div class="contents_min">
+    <% if user_signed_in? && theme.status == '受付中' %>
+    ご意見を受付中です
+    <% elsif user_signed_in? && current_user.id != theme.user_id && theme.status == '受付終了' %>
+    ご意見ありがとうございました
+    <% end %>
+    <% if user_signed_in? && current_user.id == theme.user_id && theme.opinions.present? && theme.status == '受付中' %>
+        <br><span>→   </span><%= link_to '結論を出す', new_theme_conclusion_path(theme) %>
+    <% elsif user_signed_in? && current_user.id == theme.user_id && theme.opinions.present? && theme.status == '受付終了' %>
+        <br><span>→   </span><a>結論済みです</a>
+    <% end %>
+    </div>
     <div class="contents_menu">
         <div class="contents_population">
             <p class="contents_btn">賛成<%= theme.opinions.where(foragainst: '賛成').count %>件</p>
             <p class="contents_btn">反対<%= theme.opinions.where(foragainst: '反対').count %>件</p>
         </div>
         <div class="contents_population">
-        <%= link_to '参加', new_theme_opinion_path(theme), class: "participation_btn" %>
-
-        <a href="", class="participation_btn">詳細</a>
-        <% if current_user.id != theme.user_id %>
-        <a href="", class="participation_btn">結果</a>
+        <% if user_signed_in? && current_user.id != theme.user_id && theme.status == '受付中' %>
+            <% unless theme.opinions.exists?(user_id: current_user.id) %>
+            <%= link_to '参加', new_theme_opinion_path(theme), class: "participation_btn" %>
+            <% else %>
+            <a class="participation_btn">参加済</a>
+            <% end %>
+            <a href="", class="participation_btn">詳細</a>
+        <% end %>
+        <% if user_signed_in? && theme.status == '受付終了' %>
+            <a href="", class="participation_btn">結果</a>
         <% end %>
         </div>
     </div>

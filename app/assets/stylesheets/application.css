@@ -295,3 +295,140 @@ h1, h2, h3, h4, h5{
     padding: 5px;
     border-radius: 10px;
 }
+
+.foragainst_field {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    background-color: #336600;
+}
+
+.for_title {
+    width: 50%;
+    background-color: #3366FF;
+    text-align: center;
+    font-size: 25px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #fff;
+}
+
+.against_title {
+    width: 50%;
+    background-color: #FF0000;
+    text-align: center;
+    font-size: 25px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.opinion_row {
+    background-color: #CC66FF;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.opinion_for {
+    width: 50%;
+    background-color: #CCFFFF;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.opinion_against {
+    width: 50%;
+    background-color: #FFCCFF;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.opinion_for_reason_area {
+    border: 0.2px solid #3366FF;
+    border-radius: 10px;
+    width: 80%;
+    background-color: #EEFFFF;
+    box-sizing: border-box;
+    word-break: break-all;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.opinion_against_reason_area {
+    border: 0.2px solid #FF0000;
+    border-radius: 10px;
+    width: 80%;
+    background-color: #FFEEFF;
+    box-sizing: border-box;
+    word-break: break-all;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.opinion_against_field {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.opinion_for_field {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+
+.opinion_user {
+    width: 15%;
+    text-align: center;
+}
+
+.opinion_user_image{
+    background-color: #990099;
+    height: 65px;
+    width: 65px;
+    border: 0.5px solid #9900CC;
+    border-radius: 65px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.opinion_for_reason {
+    margin-bottom: 10px;
+}
+
+.opinion_against_reason {
+    margin-bottom: 10px;
+}
+
+.new_form_theme {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    border: 2px solid #660000;
+    border-radius: 6px;
+    background-color: #FFDBC9;
+}
+
+.new_form_theme_title {
+    width: 100%;
+}
+
+.new_form_theme_text {
+    width: 100%;
+    font-size: 25px;
+}
+
+.label_newform {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.new_form_theme_user {
+    margin-top: 15px;
+    font-size: 25px;
+}

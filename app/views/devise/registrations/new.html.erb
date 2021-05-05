@@ -10,6 +10,20 @@
       </div>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email_field" %>
     </div>
+    
+    <div class="field">
+      <div class="label_field">
+      <%= f.label :ニックネーム, class: "label" %>
+      </div>
+      <%= f.text_field :nickname, autofocus: true, placeholder: "重複しないもの", class: "signup_nickname" %>
+    </div>
+    
+    <div class="field">
+      <div class="label_field">
+      <%= f.label :自己紹介, class: "label" %>
+      </div>
+      <%= f.text_area :text, autofocus: true, placeholder: "自己紹介をしてください。", class: "signup_textarea" %>
+    </div>
 
     <div class="field">
       <div class="label_field">

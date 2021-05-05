@@ -1,4 +1,5 @@
 class ThemesController < ApplicationController
+    
     def new
         @themes = Theme.new
     end

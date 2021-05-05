@@ -1,0 +1,56 @@
+<div class="opinion_row">
+    <div class="opinion_for">
+    <% if opinion.foragainst == "賛成" %>
+        <div class="opinion_for_field">
+            <div class="opinion_user">
+                <div class="opinion_user_image">
+                </div>
+                <div class="opinion_user_nickname">
+                    <%= opinion.user.nickname %>
+                </div>
+            </div>
+            <div class="opinion_for_reason_area">
+                <div class="opinion_for_reason">
+                    <%= opinion.reason %>
+                </div>
+                <% if opinion.url.present? %>
+                <div class="opinion_url">
+                    根拠<br/><%= opinion.url %>
+                </div>
+                <% else %>
+                <div class="opinion_url_none">
+                    根拠なし
+                </div>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+    </div>
+    <div class="opinion_against">
+    <% if opinion.foragainst == "反対" %>
+        <div class="opinion_against_field">
+            <div class="opinion_against_reason_area">
+                <div class="opinion_against_reason">
+                    <%= opinion.reason %>
+                </div>
+                <% if opinion.url.present? %>
+                <div class="opinion_url">
+                    根拠<br/><%= opinion.url %>
+                </div>
+                <% else %>
+                <div class="opinion_url_none">
+                    根拠なし
+                </div>
+                <% end %>
+            </div>
+            <div class="opinion_user">
+                <div class="opinion_user_image">
+                </div>
+                <div class="opinion_user_nickname">
+                    <%= opinion.user.nickname %>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    </div>
+</div>

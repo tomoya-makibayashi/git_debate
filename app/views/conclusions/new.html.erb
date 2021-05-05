@@ -19,17 +19,27 @@
         </div>
         <div class="opinion_form_field">
             <div class="label">
-                <%= f.label :ＭＯＤ（最も決定的な意見）, class: "opinion_form_label" %>
+                <%= f.label :ＭＤＯ（最も決定的な意見を言った人）, class: "opinion_form_label" %>
             </div>
             <div class="opinion_form_area1">
                 <%= f.select :winner_id, @users.map{|user| [user.nickname, user.id]}, include_blank: "選択してください", class: "opinion_form_foragainst" %>
             </div>
+            <%= f.hidden_field :status, :value => '受付終了' %>
         </div>
-        <%= f.hidden_field :status, :value => '受付終了' %>
     </div>
     <div class="action_opinion">
         <%= f.submit "結論する", class: "opinion_form_btn" %>
     </div>
 <% end %>
-    <%= render partial: "conclusions/opinion", collection: @themes %>
+    <div class="foragainst_field">
+        <div class="for_title">
+        賛成派
+        </div>
+        <div class="against_title">
+        反対派
+        </div>
+    </div>
+    <% if @opinions.present? %>
+        <%= render partial: "conclusions/opinion", collection: @opinions %>
+    <% end %>
 </div>

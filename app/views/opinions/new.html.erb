@@ -1,4 +1,11 @@
 <div class="contents_opinion">
+    <div class="new_form_theme">
+        <div class="new_form_theme_title">
+            <div class="label_newform"><%= @theme.title %></div>
+        </div>
+        <div class="new_form_theme_text"><%= simple_format(@theme.text) %></div>
+        <div class="new_form_theme_user">投稿者：<%= @theme.user.nickname %></div>
+    </div>
 <%= form_for [@theme,@opinion] do |f| %>
     <div class="opinion_form">
         <div class="opinion_form_field">
