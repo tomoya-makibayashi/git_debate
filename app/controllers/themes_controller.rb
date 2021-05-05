@@ -9,6 +9,10 @@ class ThemesController < ApplicationController
         redirect_to :root and return
     end
     
+    def show
+        @themes = Themes.find(paramas[:id])
+    end
+    
     private
     def create_params
         params.require(:theme).permit(:title, :text, :status).merge(user_id: current_user.id)
