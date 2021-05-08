@@ -1,0 +1,41 @@
+<div class="user_field">
+    <div class="user_info_area">
+        <div class="user_image"></div>
+        <div class="user_name_field">
+            <h2>◆ニックネーム</h2>
+            <div class="user_name"><%= @user.nickname %></div>
+        </div>
+        <div class="user_text_field">
+            <h2>◆自己紹介</h2>
+            <div class="user_text"><%= @user.text %></div>
+        </div>
+        <div class="user_mod_field">
+            <h2>◆MOD選出回数</h2>
+            <% if @conclusions.exists?(winner_id: @user.id) %>
+            <div class="user_mod"><%= @conclusions.where(winner_id: @user.id).size %>回</div>
+            <h2>◆MODに選出されたテーマとその意見</h2>
+                <% @themes.each do |t| %>
+                <div class="user_mod_theme">テーマ「<%= t.title %>」</div>
+                <% opinion = t.opinions.find_by(user_id: @user.id) %>
+                <div class="user_mod_theme">→意見「<%= opinion.reason %>」
+                <% end %>
+            <% else %>
+            <div class="user_mod">0回</div>
+            <% end %>
+        </div>
+        <div class="user_theme_field">
+            <h2>◆テーマ提供回数</h2>
+            <% if @user.themes.present? %>
+            <div class="user_theme"><%= @user.themes.size %>回</div>
+                <h2>◆提供テーマ</h3>
+                <ul>
+                <% @user.themes.each do |theme| %>
+                <li class="user_theme_example"><%= theme.title %></li>
+                <% end %>
+                </ul>
+            <% else %>
+            <div class="user_theme">0回</div>
+            <% end %>
+        </div>
+    </div>
+</div>

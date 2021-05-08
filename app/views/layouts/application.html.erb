@@ -18,12 +18,11 @@
           <%= link_to '一覧', root_path, class: "header_menu_btn" %>
           <%= link_to '新規', new_theme_path, class: "header_menu_btn" %>
           <% if user_signed_in? %>
+          <%= link_to '戦績', user_path(current_user), class: "header_menu_btn" %>
           <%= link_to '撤退', destroy_user_session_path, method: :delete, class: "header_menu_btn" %>
           <% else %>
           <%= link_to '参戦', new_user_session_path, class: "header_menu_btn" %>
           <% end %>
-          <a href="", class="header_menu_btn">仲間</a>
-          <a href="", class="header_menu_btn">戦績</a>
         </ul>
       </div>
     </header>
