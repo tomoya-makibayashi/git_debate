@@ -3,8 +3,11 @@
     <% if opinion.foragainst == "賛成" %>
         <div class="opinion_for_field">
             <div class="opinion_user">
-                <div class="opinion_user_image">
-                </div>
+                <% if opinion.user.image.attached? %>
+                <div class="opinion_user_image" style="background-image: url(<%= rails_blob_path(opinion.user.image) %>) "></div>
+                <% else %>
+                <div class="opinion_user_image" style="background-image: url(<%= asset_path('image2.001.jpeg') %>) "></div>
+                <% end %>
                 <div class="opinion_user_nickname">
                     <%= opinion.user.nickname %>
                 </div>
@@ -44,8 +47,11 @@
                 <% end %>
             </div>
             <div class="opinion_user">
-                <div class="opinion_user_image">
-                </div>
+                <% if opinion.user.image.attached? %>
+                <div class="opinion_user_image" style="background-image: url(<%= rails_blob_path(opinion.user.image) %>) "></div>
+                <% else %>
+                <div class="opinion_user_image" style="background-image: url(<%= asset_path('image2.001.jpeg') %>) "></div>
+                <% end %>
                 <div class="opinion_user_nickname">
                     <%= opinion.user.nickname %>
                 </div>

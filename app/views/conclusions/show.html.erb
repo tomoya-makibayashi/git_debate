@@ -5,7 +5,11 @@
         </div>
         <div class="new_form_theme_text"><%= simple_format(@theme.text) %></div>
         <div class="new_form_theme_user">投稿者：<%= @theme.user.nickname %></div>
+        <div class="new_form_conclusion">結論：<%= @theme.conclusion.foragainst %></div>
+        <div class="new_form_conclusion_reason">結論の理由：<%= simple_format(@theme.conclusion.text) %></div>
+        <div class="new_form_conclusion_mod">ＭＯＤ：<%= @user.nickname %>さんです</div>
     </div>
+    
     <div class="foragainst_field">
         <div class="for_title">
         賛成派

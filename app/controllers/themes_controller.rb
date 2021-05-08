@@ -10,7 +10,8 @@ class ThemesController < ApplicationController
     end
     
     def show
-        @themes = Themes.find(paramas[:id])
+        @theme = Theme.find(params[:id])
+        @opinions = Opinion.where(theme_id: params[:id])
     end
     
     private

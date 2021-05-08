@@ -385,14 +385,15 @@ h1, h2, h3, h4, h5{
     text-align: center;
 }
 
-.opinion_user_image{
-    background-color: #990099;
+.opinion_user_image {
     height: 65px;
     width: 65px;
+    background: center;
     border: 0.5px solid #9900CC;
-    border-radius: 65px;
+    border-radius: 50%;
     margin: 0 auto;
     margin-bottom: 10px;
+    background-size: cover;
 }
 
 .opinion_for_reason {

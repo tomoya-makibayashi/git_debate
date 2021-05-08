@@ -25,10 +25,10 @@
             <% else %>
             <a class="participation_btn">参加済</a>
             <% end %>
-            <a href="", class="participation_btn">詳細</a>
+            <%= link_to '詳細', theme_path(theme), class: "participation_btn" %>
         <% end %>
         <% if user_signed_in? && theme.status == '受付終了' %>
-            <a href="", class="participation_btn">結果</a>
+            <%= link_to '結果', theme_conclusion_path(theme, theme.conclusion), class: "participation_btn" %>
         <% end %>
         </div>
     </div>

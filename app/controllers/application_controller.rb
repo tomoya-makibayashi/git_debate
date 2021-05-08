@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     layout :layout_by_resource
     
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys:[:text, :nickname])
+      devise_parameter_sanitizer.permit(:sign_up, keys:[:text, :nickname, :image])
     end
     
     protected

@@ -17,6 +17,13 @@ class ConclusionsController < ApplicationController
         redirect_to :root and return
     end
     
+    def show
+        @theme = Theme.find(params[:theme_id])
+        @opinions = Opinion.where(theme_id: params[:theme_id])
+        conclusion = @theme.conclusion
+        @user = User.find(conclusion.winner_id)
+    end
+    
     private
     def create_conclusion_params
         params.require(:conclusion).permit(:text, :foragainst, :winner_id).merge(theme_id: params[:theme_id])
