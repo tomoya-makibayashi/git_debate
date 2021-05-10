@@ -138,9 +138,25 @@ h1, h2, h3, h4, h5{
 }
 
 .participation_btn {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    background-color: #FF3333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 15px -5px #777777;
+}
+
+.participation_btn_2 {
     color: #000;
     font-size: 20px;
+    font-weight: bold;
     margin-left: 10px;
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: 20px;
 }
 
 
@@ -229,6 +245,7 @@ h1, h2, h3, h4, h5{
     border: 2px solid #660000;
     border-radius: 6px;
     background-color: #FFDBC9;
+    margin-bottom: 30px;
 }
 
 .opinion_form_field {
@@ -413,6 +430,22 @@ h1, h2, h3, h4, h5{
     background-color: #FFDBC9;
 }
 
+.new_form_theme_btn_area {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.new_form_theme_btn {
+    background-color: #FF3333;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 15px -5px #777777;
+    font-weight: bold;
+}
+
 .new_form_theme_title {
     width: 100%;
 }
@@ -505,4 +538,101 @@ h1, h2, h3, h4, h5{
     border: 2px solid #660000;
     border-radius: 6px;
     background-color: #FFDBC9;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.user_name {
+    font-size: 25px;
+    margin: 20px, 0px;
+}
+
+.user_text {
+    font-size: 25px;
+    margin: 15px, 0px;
+}
+
+.user_mod {
+    font-size: 25px;
+    margin: 15px, 0px;
+}
+
+.user_mod_theme {
+    font-size: 25px;
+    margin: 15px, 0px;
+    color: #FF0000;
+}
+
+.user_mod_opinion {
+    font-size: 25px;
+    margin: 15px, 0px;
+}
+
+.user_theme {
+    font-size: 25px;
+    margin: 15px, 0px;
+}
+
+.user_theme_example {
+    font-size: 25px;
+    margin: 15px, 0px;
+    list-style: none;
+}
+
+.theme_user_image {
+    height: 250px;
+    width: 250px;
+    background: center;
+    border: 0.5px solid #000;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-size: cover;
+}
+
+.theme_user_info_area {
+    width: 75%;
+    margin: 0 auto;
+    padding: 40px;
+    border: 2px solid #660000;
+    border-radius: 6px;
+    background-color: #FFDBC9;
+}
+
+.theme_user_btn_area {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.theme_user_btn {
+    background-color: #FF3333;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 15px -5px #777777;
+    font-weight: bold;
+}
+
+.label_edit {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.edit_user_textarea {
+    font-size: 25px;
+    height: 200px;
+    width: 80%;
+    margin-bottom: 15px;
+    border: 2px solid #660000;
+    border-radius: 6px;
+    background-color: #FFFFEE;
+}
+
+.edit_user_field {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 40px, 0;
 }

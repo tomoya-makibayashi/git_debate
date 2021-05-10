@@ -23,7 +23,7 @@
             <% unless theme.opinions.exists?(user_id: current_user.id) %>
             <%= link_to '参加', new_theme_opinion_path(theme), class: "participation_btn" %>
             <% else %>
-            <a class="participation_btn">参加済</a>
+            <a class="participation_btn_2">参加済</a>
             <% end %>
             <%= link_to '詳細', theme_path(theme), class: "participation_btn" %>
         <% end %>

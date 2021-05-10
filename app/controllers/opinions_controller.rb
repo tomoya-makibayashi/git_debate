@@ -2,6 +2,9 @@ class OpinionsController < ApplicationController
     def new
         @theme = Theme.find(params[:theme_id]) 
         @opinion = Opinion.new
+        @opinions = Opinion.where(theme_id: params[:theme_id])
+        id = @theme.user_id
+        @user = User.where(id: id)
     end
     
     def create

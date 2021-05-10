@@ -53,7 +53,7 @@
                 <div class="opinion_user_image" style="background-image: url(<%= asset_path('image2.001.jpeg') %>) "></div>
                 <% end %>
                 <div class="opinion_user_nickname">
-                    <%= opinion.user.nickname %>
+                    <%= link_to "#{opinion.user.nickname}", user_path(opinion.user) %>
                 </div>
             </div>
         </div>

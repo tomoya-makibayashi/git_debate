@@ -9,10 +9,12 @@ class UsersController < ApplicationController
     end
     
     def edit
+        @user = User.find(params[:id])
     end
     
     def update
         current_user.update(update_params)
+        redirect_to :root and return
     end
     
     private

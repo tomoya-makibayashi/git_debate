@@ -1,13 +1,10 @@
 <div class="contents_opinion">
-    <div class="new_form_theme">
+    <div class="opinion_form">
         <div class="new_form_theme_title">
             <div class="label_newform"><%= @theme.title %></div>
         </div>
         <div class="new_form_theme_text"><%= simple_format(@theme.text) %></div>
-        <div class="new_form_theme_user">投稿者：<%= @theme.user.nickname %></div>
-    </div>
 <%= form_for [@theme,@opinion] do |f| %>
-    <div class="opinion_form">
         <div class="opinion_form_field">
             <div class="label">
                 <%= f.label :賛成？反対？, class: "opinion_form_label" %>
@@ -31,10 +28,21 @@
             <div class="opinion_form_area">
                 <%= f.url_field :url, placeholder: "URLを入力", class: "opinion_form_url" %>
             </div>
+            <div class="action_opinion">
+                <%= f.submit "投稿する", class: "opinion_form_btn" %>
+            </div>
         </div>
     </div>
-    <div class="action_opinion">
-        <%= f.submit "投稿する", class: "opinion_form_btn" %>
-    </div>
 <% end %>
+<% if @opinions.present? %>
+<div class="foragainst_field">
+    <div class="for_title">
+    賛成派
+    </div>
+    <div class="against_title">
+    反対派
+    </div>
+</div>
+        <%= render partial: "conclusions/opinion", collection: @opinions %>
+    <% end %>
 </div>

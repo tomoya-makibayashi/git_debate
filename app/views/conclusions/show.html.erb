@@ -9,8 +9,9 @@
             <div class="new_form_conclusion_subtitle">テーマ選定者のコメント</div>
             <div class="new_form_conclusion_reason"><%= simple_format(@theme.conclusion.text) %></div>
         </div>
-        <div class="new_form_theme_user">投稿者：<%= @theme.user.nickname %></div>
+        <div class="new_form_theme_user">投稿者：<%= link_to "#{@theme.user.nickname}", user_path(@user) %></div>
     </div>
+    <% if @opinions.present? %>
     <div class="foragainst_field">
         <div class="for_title">
         賛成派
@@ -19,7 +20,6 @@
         反対派
         </div>
     </div>
-    <% if @opinions.present? %>
         <%= render partial: "conclusions/opinion", collection: @opinions %>
     <% end %>
 </div>

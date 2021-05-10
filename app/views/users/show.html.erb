@@ -1,6 +1,12 @@
 <div class="user_field">
-    <div class="user_info_area">
-        <div class="user_image"></div>
+    <div class="theme_user_info_area">
+        <div class="user_image">
+            <% if @user.image.attached? %>
+            <div class="theme_user_image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div>
+            <% else %>
+            <div class="theme_user_image" style="background-image: url(<%= asset_path('image2.001.jpeg') %>) "></div>
+            <% end %>
+        </div>
         <div class="user_name_field">
             <h2>◆ニックネーム</h2>
             <div class="user_name"><%= @user.nickname %></div>
@@ -15,9 +21,9 @@
             <div class="user_mod"><%= @conclusions.where(winner_id: @user.id).size %>回</div>
             <h2>◆MODに選出されたテーマとその意見</h2>
                 <% @themes.each do |t| %>
-                <div class="user_mod_theme">テーマ「<%= t.title %>」</div>
+                <div class="user_mod_theme">テーマ：「<%= t.title %>」</div>
                 <% opinion = t.opinions.find_by(user_id: @user.id) %>
-                <div class="user_mod_theme">→意見「<%= opinion.reason %>」
+                <div class="user_mod_opinion">→意見：<%= opinion.reason %>
                 <% end %>
             <% else %>
             <div class="user_mod">0回</div>
@@ -36,6 +42,12 @@
             <% else %>
             <div class="user_theme">0回</div>
             <% end %>
+        </div>
+        <div class="theme_user_btn_area">
+        <% if current_user.id == @user.id %>
+            <%= link_to '編集', edit_user_path(@user), class: "theme_user_btn" %>
+        <% else %>
+        <% end %>
         </div>
     </div>
 </div>
