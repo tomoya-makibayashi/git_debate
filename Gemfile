@@ -66,3 +66,6 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'pry-rails'
 gem 'mini_magick'
+group :production do
+  gem 'rails_12factor'
+end
