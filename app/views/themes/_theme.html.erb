@@ -25,6 +25,8 @@
             <% else %>
             <a class="participation_btn_2">参加済</a>
             <% end %>
+        <% end %>
+        <% if user_signed_in? && theme.status == '受付中' %>
             <%= link_to '詳細', theme_path(theme), class: "participation_btn" %>
         <% end %>
         <% if user_signed_in? && theme.status == '受付終了' %>

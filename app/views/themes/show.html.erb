@@ -5,9 +5,13 @@
         </div>
         <div class="new_form_theme_text"><%= simple_format(@theme.text) %></div>
         <div class="new_form_theme_user">投稿者：<%= link_to "#{@theme.user.nickname}", user_path(@theme.user) %></div>
+        <% if current_user.id != @theme.user_id %>
+        <% unless @theme.opinions.exists?(user_id: current_user.id) %>
         <div class="new_form_theme_btn_area">
         <%= link_to '参加', new_theme_opinion_path(@theme), class: "new_form_theme_btn" %>
         </div>
+        <% end %>
+        <% end %>
     </div>
     <% if @opinions.present? %>
     <div class="foragainst_field">
