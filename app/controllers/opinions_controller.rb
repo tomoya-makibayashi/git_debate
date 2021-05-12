@@ -1,6 +1,6 @@
 class OpinionsController < ApplicationController
     
-    before_action :redirect, only: :new
+    before_action :redirect, only: [:new]
     
     def new
         @theme = Theme.find(params[:theme_id]) 
@@ -21,8 +21,9 @@ class OpinionsController < ApplicationController
     end
     
     def redirect
-        if Opinion.exists?(user_id: current_user.id)
+        if Opinion.exists?(user_id: current_user.id, theme_id: params[:theme_id]) || Conclusion.exists?(theme_id: params[:theme_id])
             redirect_to :root
         end
     end
+    
 end

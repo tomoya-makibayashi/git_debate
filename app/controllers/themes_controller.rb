@@ -1,5 +1,7 @@
 class ThemesController < ApplicationController
     
+    before_action :redirect, only: [:show]
+    
     def new
         @themes = Theme.new
     end
@@ -17,5 +19,11 @@ class ThemesController < ApplicationController
     private
     def create_params
         params.require(:theme).permit(:title, :text, :status).merge(user_id: current_user.id)
+    end
+    
+    def redirect
+        if Conclusion.exists?(theme_id: params[:theme_id])
+            redirect_to :root
+        end
     end
 end
