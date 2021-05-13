@@ -9,7 +9,14 @@
             <div class="new_form_conclusion_subtitle">テーマ選定者のコメント</div>
             <div class="new_form_conclusion_reason"><%= simple_format(@theme.conclusion.text) %></div>
         </div>
-        <div class="new_form_theme_user">投稿者：<%= link_to "#{@theme.user.nickname}", user_path(@user) %></div>
+        <div class="new_form_theme_user_field">
+            <% if @theme.user.image.attached? %>
+                <%= image_tag "#{rails_blob_path(@theme.user.image)}", class: "new_form_theme_user_image" %>
+            <% else %>
+                <%= image_tag 'image2.001.jpeg', class: "new_form_theme_user_image" %>
+            <% end %>
+            <div class="new_form_theme_user">投稿者：<%= link_to "#{@theme.user.nickname}", user_path(@user) %></div>
+        </div>
     </div>
     <% if @opinions.present? %>
     <div class="foragainst_field">

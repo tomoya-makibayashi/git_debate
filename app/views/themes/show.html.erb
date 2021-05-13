@@ -6,13 +6,9 @@
         <div class="new_form_theme_text"><%= simple_format(@theme.text) %></div>
         <div class="new_form_theme_user_field">
             <% if @theme.user.image.attached? %>
-            <div class="new_form_theme_user_image_area">
-                <div class="new_form_theme_user_image" style="background-image: url(<%= rails_blob_path(@theme.user.image) %>) "></div>
-            </div>
+                <%= image_tag "#{rails_blob_path(opinion.user.image)}", class: "new_form_theme_user_image" %>
             <% else %>
-            <div class="new_form_theme_user_image_area">
-                <div class="new_form_theme_user_image" style="background-image: url(<%= asset_path('image2.001.jpeg') %>) "></div>
-            </div>
+                <%= image_tag 'image2.001.jpeg', class: "new_form_theme_user_image" %>
             <% end %>
             <div class="new_form_theme_user">投稿者：<%= link_to "#{@theme.user.nickname}", user_path(@theme.user) %></div>
         </div>

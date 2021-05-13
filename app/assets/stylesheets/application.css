@@ -314,8 +314,9 @@ h1, h2, h3, h4, h5{
 }
 
 .foragainst_field {
-    margin-top: 100px;
-    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 90%;
     display: flex;
     background-color: #336600;
 }
@@ -343,7 +344,8 @@ h1, h2, h3, h4, h5{
 
 .opinion_row {
     background-color: #CC66FF;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     box-sizing: border-box;
     display: flex;
 }
@@ -405,7 +407,7 @@ h1, h2, h3, h4, h5{
 .opinion_user_image {
     height: 65px;
     width: 65px;
-    background: center;
+    object-fit: cover;
     border: 0.5px solid #9900CC;
     border-radius: 50%;
     margin: 0 auto;
@@ -465,6 +467,7 @@ h1, h2, h3, h4, h5{
 .new_form_theme_user_field {
     display: flex;
     justify-content: flex-start;
+    margin-top: 15px;
 }
 
 .new_form_theme_user {
@@ -476,12 +479,10 @@ h1, h2, h3, h4, h5{
 .new_form_theme_user_image {
     height: 65px;
     width: 65px;
-    background: center;
+    object-fit: cover;
     border: 0.5px solid #9900CC;
     border-radius: 50%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    background-size: cover;
+    display: block;
 }
 
 .new_form_conclusion_area {
