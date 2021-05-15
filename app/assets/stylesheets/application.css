@@ -599,6 +599,12 @@ h2 {
     list-style: none;
 }
 
+.user_image {
+    margin: 0 auto;
+    width: 280px;
+    margin: 0 auto;
+}
+
 .theme_user_image {
     height: 250px;
     width: 250px;
@@ -606,7 +612,7 @@ h2 {
     border: 0.5px solid #000;
     margin: 0 auto;
     margin-bottom: 10px;
-    background-size: cover;
+    object-fit: cover;
 }
 
 .theme_user_info_area {

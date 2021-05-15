@@ -2,9 +2,9 @@
     <div class="theme_user_info_area">
         <div class="user_image">
             <% if @user.image.attached? %>
-            <div class="theme_user_image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div>
+                <%= image_tag "#{rails_blob_path(@theme.user.image)}", class: "theme_user_image" %>
             <% else %>
-            <div class="theme_user_image" style="background-image: url(<%= asset_path('image2.001.jpeg') %>) "></div>
+                <%= image_tag 'image2.001.jpeg', class: "theme_user_image" %>
             <% end %>
         </div>
         <%= form_for(@user) do |f| %>
