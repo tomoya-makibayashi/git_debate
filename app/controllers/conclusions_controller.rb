@@ -18,10 +18,10 @@ class ConclusionsController < ApplicationController
     end
     
     def show
-        @theme = Theme.find(params[:id])
-        @opinions = Opinion.where(theme_id: params[:id])
-        conclusion = @theme.conclusion
-        @user = User.find(conclusion.winner_id)
+        @theme = Theme.find(params[:theme_id])
+        @opinions = Opinion.where(theme_id: params[:theme_id])
+        @conclusion = Conclusion.find(params[:id])
+        @user = User.find(@conclusion.winner_id)
     end
     
     private

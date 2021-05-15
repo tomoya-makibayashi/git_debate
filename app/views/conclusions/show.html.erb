@@ -3,11 +3,11 @@
     <div class="new_form_theme_title">
             <div class="label_newform_themeco"><%= @theme.title %></div>
         </div>
-    <div class="new_form_conclusion_title">→　結論「<%= @theme.conclusion.foragainst %>派」の勝利！！</div>
+    <div class="new_form_conclusion_title">→　結論「<%= @conclusion.foragainst %>派」の勝利！！</div>
     <div class="new_form_conclusion_mod">ＭＯＤ(最も決定的な意見)は「<%= @user.nickname %>さん」です</div>
         <div class="new_form_conclusion">
             <div class="new_form_conclusion_subtitle">テーマ選定者のコメント</div>
-            <div class="new_form_conclusion_reason"><%= simple_format(@theme.conclusion.text) %></div>
+            <div class="new_form_conclusion_reason"><%= simple_format(@conclusion.text) %></div>
         </div>
         <div class="new_form_theme_user_field">
             <% if @theme.user.image.attached? %>
