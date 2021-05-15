@@ -9,7 +9,7 @@
                 <%= image_tag 'image2.001.jpeg', class: "opinion_user_image" %>
                 <% end %>
                 <div class="opinion_user_nickname">
-                    <%= opinion.user.nickname %>
+                    <%= link_to "#{opinion.user.nickname}", user_path(opinion.user) %>
                 </div>
             </div>
             <div class="opinion_for_reason_area">
