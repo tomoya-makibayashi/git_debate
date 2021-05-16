@@ -15,7 +15,7 @@
             <% else %>
                 <%= image_tag 'image2.001.jpeg', class: "new_form_theme_user_image" %>
             <% end %>
-            <div class="new_form_theme_user">投稿者：<%= link_to "#{@theme.user.nickname}", user_path(@user) %></div>
+            <div class="new_form_theme_user">投稿者：<%= link_to "#{@theme.user.nickname}", user_path(@theme.user) %></div>
         </div>
     </div>
     <% if @opinions.present? %>
